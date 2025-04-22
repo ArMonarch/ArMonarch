@@ -14,6 +14,7 @@ I love to listen to music, play video games and configure my text editor(neovim)
 - NeoVim, Ghostty
 - New programming languages
 - Low level design
+- Design Patterns
 
 One of my favorite hobbies is learning new programming languages. Here is a list of the ones I know (in no particular order):
 - C
