@@ -6,8 +6,6 @@
 
 I love to listen to music, play video games and configure my text editor(neovim), Terminal(Ghostty)!
 
-## Currently Building: A Blog Website in Deno & Typescript
-
 ## Talk to me about...
 - Web Developmet
 - Games
