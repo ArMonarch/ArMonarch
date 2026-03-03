@@ -21,4 +21,4 @@ One of my favorite hobbies is learning new programming languages. Here is a list
 - Python
 - Rust
 - Lua
-- Zig
+- Odin
