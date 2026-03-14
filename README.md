@@ -1,24 +1,19 @@
-# About Me:
-## Hi, I'm a Computer Science Student.
+# Hey, I'm ArMonarch <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">
 
-**[@Prafful Raj Thapa](http://ardev.site/) [@ArMonarch](https://github.com/ArMonarch/ArMonarch/) <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width=25>**
+Computer Science student who loves listening to music, playing video games, and tinkering with [NixOS](https://nixos.org/), [Neovim](https://neovim.io/), and [Ghostty](https://ghostty.org/). NixOS is my favorite — check out my configuration at [Nixify](https://github.com/ArMonarch/Nixify).
 
+## Talk to me about
 
-I love to listen to music, play video games and configure my text editor(neovim), Terminal(Ghostty)!
-
-## Talk to me about...
-- Web Developmet
-- Games
-- NeoVim, Ghostty
+- NixOS
+- Neovim, Ghostty
 - New programming languages
-- Low level design
-- Design Patterns
+- Low-level design
+- Design patterns
+- Web development
+- Games
 
-One of my favorite hobbies is learning new programming languages. Here is a list of the ones I know (in no particular order):
-- C
-- JavaScript
-- TypeScript
-- Python
-- Rust
-- Lua
-- Odin
+## Languages I know
+
+One of my favorite hobbies is learning new programming languages. Here are the ones I know (in no particular order):
+
+C, JavaScript, TypeScript, Python, Rust, Odin, Lua
