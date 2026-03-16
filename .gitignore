@@ -1,9 +1,9 @@
 # Build output
-target/
+# target/
 
 # Odin compiler artifacts
-*.o
-*.wasm
+# *.o
+# *.wasm
 
 # Nix
 result
