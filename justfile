@@ -1,11 +1,14 @@
 uname := "ArMonarch <praffulthapa12@gmail.com>"
 name := "armonarch"
 src := "src"
-editor := "nvim"
 
 # build on file change
 watch:
-  watchexec --exts odin -- just build
+  watchexec --exts odin,glsl -- just build
+
+# start an server with python
+serve: build-debug
+  python -m http.server 4000
 
 # build debug binary (no optimization)
 build-debug:
@@ -31,8 +34,5 @@ build-speed:
 build-aggressive:
   [ -d target/aggressive ] || mkdir -p target/aggressive
   odin build {{src}} -target:js_wasm32 -out:target/aggressive/{{name}} -o:aggressive
-
-serve: build-debug
-  python -m http.server 4000
 
 alias build := build-debug
