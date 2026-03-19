@@ -37,10 +37,9 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             odin-bin."dev-2026-03".latest
-            llvmPackages.bintools-unwrapped
-
             ols-bin."dev-2026-02".latest
             typescript-language-server
+            llvmPackages.bintools-unwrapped
 
             python311
             just
@@ -50,7 +49,9 @@
             echo "Initialized Odin Development Environment"
             echo "  ├── $(odin version)"
             echo "  ├── $(ols version)"
-            echo "  └── $(just --version)"
+            echo "  ├── $(just --version)"
+            echo "  ├── $(python --version)"
+            echo "  └── $(watchexec -V)"
           '';
         };
       };
