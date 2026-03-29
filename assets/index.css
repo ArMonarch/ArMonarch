@@ -4,7 +4,7 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 
   padding: 0px;
   margin: 0px;
@@ -17,18 +17,16 @@ body {
   top: 0px;
   right: 0px;
 
-  padding: 0.5rem;
+  padding: 10px 10px 0px 0px;
 
   font-size: 0.875rem;
   font-family: "Adwaita";
   line-height: 1.25rem;
 
-  color: #ffffff;
+  color: #000000;
 }
 
 #canvas {
-  margin: 5rem 0px 0px 0px;
-
   width: 100%;
   height: 100%;
 }
