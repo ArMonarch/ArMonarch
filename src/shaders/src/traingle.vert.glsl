@@ -8,5 +8,6 @@ in vec2 a_position;
 void main() {
   // gl_Position is a special variable a vertex shader
   // is responsible for setting
-  gl_Position = vec4(a_position, 0, 1);
+  vec2 positions = a_position * 2.0 - 1.0;
+  gl_Position = vec4(positions, 0.0, 1.0);
 }
