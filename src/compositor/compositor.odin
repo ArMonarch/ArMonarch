@@ -1,10 +1,9 @@
 package compositor
 
-import "core:fmt"
-import gl "vendor:wasm/WebGL"
-
 import "../colors"
 import "../shaders"
+import "core:fmt"
+import gl "vendor:wasm/WebGL"
 
 // global compositor
 COMPOSITOR: Compositor
@@ -25,15 +24,14 @@ build_compositor :: proc() {
 	COMPOSITOR.u_time = 0
 
 	program, ok := gl.CreateProgramFromStrings(
-		{transmute(string)shaders.COMPOSITOR_VERT_SHADER},
-		{transmute(string)shaders.COMPOSITOR_FRAG_SHADER},
+		{transmute(string)shaders.Compositor_Vert_Shader},
+		{transmute(string)shaders.Compositor_Frag_Shader},
 	)
 
 	if ok != true {
 		fmt.eprintln("Error: failed to create compositor program")
 		return
 	}
-
 	COMPOSITOR.program = program
 
 	// select the program to use
@@ -45,7 +43,6 @@ build_compositor :: proc() {
 	// set uniforms for shaders
 	u_time := gl.GetUniformLocation(program, "u_time")
 	gl.Uniform1f(u_time, COMPOSITOR.u_time)
-
 
 	// create and bind VAO first so it captures all buffer bindings
 	COMPOSITOR.vao = gl.CreateVertexArray()
@@ -99,6 +96,7 @@ render_frame :: proc(dt: f32) {
 
 	// PASS 1: render each surface framebuffer to its texture
 	for surface in COMPOSITOR.surfaces {
+		if !surface.dirty do continue
 		gl.BindFramebuffer(gl.FRAMEBUFFER, surface.framebuffer)
 		gl.Viewport(0, 0, surface.width, surface.height)
 

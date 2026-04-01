@@ -1,7 +1,10 @@
 package shaders
 
-TRAINGLE_VERT_SHADER :: #load("./src/traingle.vert.glsl")
-TRAINGLE_FRAG_SHADER :: #load("./src/traingle.frag.glsl")
+ArtWall_Vert_Shader :: #load("./src/artwall.vert.glsl")
+ArtWall_Frag_Shader :: #load("./src/artwall.frag.glsl")
 
-COMPOSITOR_VERT_SHADER :: #load("./src/compositor.vert.glsl")
-COMPOSITOR_FRAG_SHADER :: #load("./src/compositor.frag.glsl")
+Traingle_Vert_Shader :: #load("./src/traingle.vert.glsl")
+Traingle_Frag_Shader :: #load("./src/traingle.frag.glsl")
+
+Compositor_Vert_Shader :: #load("./src/compositor.vert.glsl")
+Compositor_Frag_Shader :: #load("./src/compositor.frag.glsl")

@@ -1,4 +1,4 @@
-package application
+package compositor
 
 import gl "vendor:wasm/WebGL"
 
@@ -17,4 +17,6 @@ Application :: struct {
 	// application lifetime
 	render:     App_Render_Fn,
 	destroy:    App_Destroy_Fn,
+	// rawptr that application may use to store theirs state
+	state:      rawptr,
 }

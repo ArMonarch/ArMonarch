@@ -1,12 +1,10 @@
 package ArMonarch
 
+import "apps"
 import "base:runtime"
-import "core:fmt"
-import "core:math/rand"
-import gl "vendor:wasm/WebGL"
-
-import "colors"
 import "compositor"
+import "core:fmt"
+import gl "vendor:wasm/WebGL"
 
 foreign import lib "functions"
 foreign lib {
@@ -41,11 +39,13 @@ main :: proc() {
 
 	// initialize artwall
 	surface, success := compositor.create_surface(0, 0, canvas_width, canvas_height, .Background)
+	if success := apps.build_artwall(surface); success != true {
+		fmt.eprintfln("Error: failed to build ArtWall application")
+	}
 }
 
 @(export)
 update :: proc(dt: f32) -> (keep_going: bool = false) {
-
 	// update the fps counter
 	ctx.acc_time += dt
 	ctx.fps += 1

@@ -3,8 +3,6 @@ package compositor
 import "core:fmt"
 import gl "vendor:wasm/WebGL"
 
-import "../application"
-
 Surface_Id :: distinct u32
 
 Layer_Kind :: enum u8 {
@@ -26,7 +24,7 @@ Surface :: struct {
 	framebuffer:   gl.Framebuffer,
 	texture:       gl.Texture,
 	// application
-	application:   ^application.Application,
+	application:   ^Application,
 }
 
 create_surface :: proc(
